@@ -38,3 +38,38 @@ func TestCategorySave(t *testing.T) {
 	e = country.Delete()
 	assert.Nil(t, e)
 }
+
+func TestGetCategories(t *testing.T) {
+	country := Country{
+		CountryName: "Hungary",
+		CountryCode: "HU",
+		Visited:     true,
+		OnWishList:  false,
+		CreatedAt:   time.Now().UTC(),
+		UpdatedAt:   time.Now().UTC(),
+	}
+	e := country.Insert()
+	assert.Nil(t, e)
+	country = Country{
+		CountryName: "Italy",
+		CountryCode: "IT",
+		Visited:     true,
+		OnWishList:  false,
+		CreatedAt:   time.Now().UTC(),
+		UpdatedAt:   time.Now().UTC(),
+	}
+	e = country.Insert()
+	assert.Nil(t, e)
+
+	res := GetCountries()
+	//assert.Equal(t, len(res), 2)
+	assert.Equal(t, res[0].CountryName, "Hungary")
+	assert.Equal(t, res[0].CountryCode, "HU")
+	assert.Equal(t, res[0].Visited, true)
+	assert.Equal(t, res[0].OnWishList, false)
+	assert.Equal(t, res[1].CountryName, "Italy")
+	for _, result := range res {
+		country.Load(result.Id)
+		country.Delete()
+	}
+}
