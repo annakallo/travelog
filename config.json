@@ -1,0 +1,16 @@
+{
+  "LogLevel": 1,
+  "LogFile": "travel-log.log",
+  "MysqlIP": "localhost",
+  "MysqlPort": "3306",
+  "MysqlUser": "travellog",
+  "MysqlPass": "password",
+  "MysqlDB": "travellog",
+  "WebPort": 8080,
+  "WebPrefix": "/client",
+  "WebUsername": "admin",
+  "WebPassword": "12345",
+  "Client": "server/client/build/",
+  "Static": "server/static/",
+  "Template": "server/template/"
+}
