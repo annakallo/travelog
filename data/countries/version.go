@@ -1,9 +1,9 @@
 package countries
 
 import (
-	"github.com/annakallo/travel-log-server/mysql"
-	"github.com/annakallo/travel-log-server/settings"
 	"github.com/annakallo/travelog/log"
+	"github.com/annakallo/travelog/mysql"
+	"github.com/annakallo/travelog/settings"
 )
 
 const (
