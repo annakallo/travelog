@@ -1,6 +1,6 @@
 {
   "LogLevel": 1,
-  "LogFile": "travel-log.log",
+  "LogFile": "travelog.log",
   "MysqlIP": "localhost",
   "MysqlPort": "3306",
   "MysqlUser": "travellog",

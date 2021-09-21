@@ -1,4 +1,4 @@
-module github.com/annakallo/travel-log-server
+module github.com/annakallo/travelog
 
 go 1.17
 

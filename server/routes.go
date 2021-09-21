@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/annakallo/travel-log-server/server/api"
+	"github.com/annakallo/travelog/server/api"
 	"net/http"
 )
 

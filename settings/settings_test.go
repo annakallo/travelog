@@ -1,7 +1,7 @@
 package settings_test
 
 import (
-	"github.com/annakallo/travel-log-server/settings"
+	"github.com/annakallo/travelog/settings"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

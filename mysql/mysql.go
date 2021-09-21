@@ -3,7 +3,7 @@ package mysql
 import (
 	"database/sql"
 	"fmt"
-	"github.com/annakallo/travel-log-server/config"
+	"github.com/annakallo/travelog/config"
 	"github.com/annakallo/travelog/log"
 	_ "github.com/go-sql-driver/mysql"
 	"sync"

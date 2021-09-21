@@ -1,7 +1,7 @@
 package config_test
 
 import (
-	"github.com/annakallo/travel-log-server/testutil"
+	"github.com/annakallo/travelog/testutil"
 	"testing"
 )
 

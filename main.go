@@ -2,16 +2,16 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/annakallo/travel-log-server/config"
-	"github.com/annakallo/travel-log-server/data/countries"
-	"github.com/annakallo/travel-log-server/server"
-	"github.com/annakallo/travel-log-server/settings"
+	"github.com/annakallo/travelog/config"
+	"github.com/annakallo/travelog/data/countries"
 	"github.com/annakallo/travelog/log"
+	"github.com/annakallo/travelog/server"
+	"github.com/annakallo/travelog/settings"
 	"net/http"
 )
 
 const (
-	LogPrefix = "travel-log"
+	LogPrefix = "travelog"
 )
 
 func initializeConfigAndLogger() {

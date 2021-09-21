@@ -2,7 +2,7 @@ package countries
 
 import (
 	"fmt"
-	"github.com/annakallo/travel-log-server/mysql"
+	"github.com/annakallo/travelog/mysql"
 	"time"
 )
 

@@ -1,8 +1,8 @@
 package settings
 
 import (
-	"github.com/annakallo/travel-log-server/mysql"
 	"github.com/annakallo/travelog/log"
+	"github.com/annakallo/travelog/mysql"
 	"time"
 )
 
