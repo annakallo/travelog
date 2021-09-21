@@ -41,6 +41,29 @@ func updateV1M0(version string) string {
 		version = "v1.0-0"
 		settings.UpdateVersion(PackageName, version)
 	}
+	if version == "v1.0-0" {
+		defaultCountries := []Country{
+			{CountryName: "Romania", CountryCode: "RO", Visited: true, OnWishList: false},
+			{CountryName: "Spain", CountryCode: "ES", Visited: true, OnWishList: false},
+			{CountryName: "Hungary", CountryCode: "HU", Visited: true, OnWishList: false},
+			{CountryName: "Netherlands", CountryCode: "NL", Visited: true, OnWishList: false},
+			{CountryName: "France", CountryCode: "FR", Visited: true, OnWishList: false},
+			{CountryName: "United Kingdom", CountryCode: "GB", Visited: true, OnWishList: false},
+			{CountryName: "Italy", CountryCode: "IT", Visited: true, OnWishList: false}}
+		for _, country := range defaultCountries {
+			stmt, _ := db.Prepare(`insert countries set country_name=?, country_code=?, visited=?, on_wish_list=?`)
+			_, e := stmt.Exec(country.CountryName, country.CountryName, country.Visited, country.OnWishList)
+			if e != nil {
+				log.GetInstance().Errorf(LogPrefix, "Trouble when inserting default country in countries table: ", e.Error())
+				return version
+			}
+			stmt.Close()
+		}
+
+		log.GetInstance().Infof(LogPrefix, "Table countries updated.")
+		version = "v1.0-1"
+		settings.UpdateVersion(PackageName, version)
+	}
 
 	return version
 }
