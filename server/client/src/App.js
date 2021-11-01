@@ -1,17 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from "./components/navbar";
 import React from "react";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import NavBar from "./components/navbar";
 import Map from "./components/map";
 // import MapHCH from "./components/mapHCH";
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar/>
-      {/*<MapHCH/>*/}
-      <Map/>
-    </div>
+      <React.Fragment>
+          <BrowserRouter>
+              <div className="App">
+                  <NavBar/>
+                  {/*<MapHCH/>*/}
+                  <main>
+                      <Switch>
+                          <Route path="/" component={Map}/>
+                      </Switch>
+                  </main>
+              </div>
+          </BrowserRouter>
+      </React.Fragment>
   );
 }
 
